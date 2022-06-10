@@ -1,0 +1,78 @@
+$icon_font_name:"Icons";
+@font-face {
+	font-family:$icon_font_name;
+	src: url('../fonts/Icons.eot');
+	src: url('../fonts/Icons.eot?#iefix') format('eot'),
+	url('../fonts/Icons.woff') format('woff'),
+	url('../fonts/Icons.ttf') format('truetype'),
+	url('../fonts/Icons.svg#Icons') format('svg');
+}
+%icon-add,
+%icon-close,
+%icon-keyboard_arrow_left,
+%icon-keyboard_arrow_right,
+%icon-menu,
+%icon-remove,
+%icon-search,
+%last_selector {
+		&:before {
+			font-family:$icon_font_name;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+			text-decoration: none;
+			text-transform: none;
+		}
+	}
+
+	[class^="icon-"] {
+	&:before,
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+[class^="icon-"] {
+	&:after {
+		font-family: $icon_font_name;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+.icon-add:before {
+    content:'\E001';
+}
+.icon-close:before {
+    content:'\E002';
+}
+.icon-keyboard_arrow_left:before {
+    content:'\E003';
+}
+.icon-keyboard_arrow_right:before {
+    content:'\E004';
+}
+.icon-menu:before {
+    content:'\E005';
+}
+.icon-remove:before {
+    content:'\E006';
+}
+.icon-search:before {
+    content:'\E007';
+}

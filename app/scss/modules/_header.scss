@@ -1,0 +1,12 @@
+header {
+    height: 160px;
+
+    @include for-tablet {    
+        height: 80px;
+    }  
+}
+
+.container {
+    position: relative;
+}
+
