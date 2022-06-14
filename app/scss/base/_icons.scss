@@ -7,13 +7,11 @@ $icon_font_name:"Icons";
 	url('../fonts/Icons.ttf') format('truetype'),
 	url('../fonts/Icons.svg#Icons') format('svg');
 }
-%icon-add,
 %icon-close,
-%icon-keyboard_arrow_left,
-%icon-keyboard_arrow_right,
+%icon-Group,
+%icon-legal-logo-2,
+%icon-legal-logo,
 %icon-menu,
-%icon-remove,
-%icon-search,
 %last_selector {
 		&:before {
 			font-family:$icon_font_name;
@@ -55,24 +53,18 @@ $icon_font_name:"Icons";
 	}
 }
 
-.icon-add:before {
+.icon-close:before {
     content:'\E001';
 }
-.icon-close:before {
+.icon-Group:before {
     content:'\E002';
 }
-.icon-keyboard_arrow_left:before {
+.icon-legal-logo-2:before {
     content:'\E003';
 }
-.icon-keyboard_arrow_right:before {
+.icon-legal-logo:before {
     content:'\E004';
 }
 .icon-menu:before {
     content:'\E005';
-}
-.icon-remove:before {
-    content:'\E006';
-}
-.icon-search:before {
-    content:'\E007';
 }

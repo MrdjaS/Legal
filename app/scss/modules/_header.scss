@@ -1,12 +1,265 @@
 header {
-    height: 160px;
-
-    @include for-tablet {    
-        height: 80px;
-    }  
+    background-color: $NewGrey;
 }
 
-.container {
+button {
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .icon-menu {
+        font-size: 1.6rem;
+        color: $White;
+        
+    }
+
+    .icon-close {
+        font-size: 1.6rem;
+        color: $White;
+    }
+}
+
+.icon-close-btn {
+    display: none;
+}
+
+.icon-menu-btn {
+    display: none;
+}
+
+.navbar {
     position: relative;
+    top: 29px;
+    transition: all 0.35s ease;
+
+    @include for-tablet {  
+        top: 0;
+    }
 }
 
+.navbar__content {
+    max-width: 1170px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding-top: 25px;
+    padding-bottom: 22.5px;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:1210px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include for-tablet {  
+        padding-top: 25px;
+    }
+
+    @include for-mobile-L {  
+        padding-top: 15px;
+        padding-bottom: 14px;
+    }
+}
+
+.navbar__menu {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    background-color: $White;
+    border-top: 1px solid $BackgroundGrey;
+    z-index: 3;
+    display: none;
+
+    @include for-mobile-L {  
+        text-align: left;
+        padding-left: 20px;
+    } 
+}
+
+.navbar__list {
+    margin-top: 50px;
+    margin-bottom: 370px;
+    list-style-type: none;
+
+    @include for-tablet {  
+        margin-top: 70px;
+        margin-bottom: 411px;
+    }
+
+    @include for-mobile-L {  
+        margin-top: 30px;
+        margin-bottom: 312px;
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        @include for-tablet {  
+            margin-bottom: 17px;
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &:nth-of-type(3) {
+            a {
+                color: $Orange;
+            } 
+        }
+
+        a {
+            text-decoration: none;
+            color: $NewGrey;
+            font-size: 2.6rem;
+            line-height: 3.9rem;
+            font-weight: 400;
+
+            @include for-tablet {  
+                font-size: 2rem;
+                line-height: 3rem;
+            }
+
+            @include for-mobile-L {  
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+}
+
+.navbar__logo {
+    z-index: 1;
+    height: 42.5px;
+    width: auto;
+    display: none;
+
+    @include for-mobile-L {  
+        height: 31px;
+        width: auto;
+    }
+}
+
+.header__container {
+    z-index: 1;
+    max-width: 570px;
+    width: 100%;
+    margin-top: 105px;
+    margin-bottom: 197px;
+
+    @media (max-width:1210px) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    @include for-tablet {  
+        margin-top: 57px;
+        max-width: 544px;
+        margin-bottom: 16px;
+    }
+
+    @include for-mobile-L {  
+        margin-top: 35px;
+        margin-bottom: 5px;
+    }
+}
+
+.header__group {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    max-width: 750px;
+    width: 100%;
+
+    @include for-tablet { 
+        position: relative;
+        margin-bottom: -50.5%;
+        max-width: 768px;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+}
+
+.header__content {
+    h4 {
+        color: $White;
+        margin-bottom: 24px;
+
+        &:last-of-type {
+            display: none;
+        }
+
+        @include for-tablet {  
+            display: none;
+
+            &:last-of-type {
+                display: block;
+            }
+        }
+
+        @include for-mobile-L {  
+            margin-bottom: 20px;
+        }
+    }
+
+    hr {
+        width: 100px;
+        margin-bottom: 24px;
+        border: none;
+        border-bottom: 1px solid $White;
+
+        @include for-mobile-L {  
+            margin-bottom: 20px;
+        }
+    }
+
+    h1 {
+        margin-bottom: 24px;
+
+        @include for-mobile-L {  
+            margin-bottom: 20px;
+        }
+    }
+
+    h5 {
+        color: $White;
+    }
+}
+
+
+.hero {
+    height: 2000px;
+    background-color: aquamarine;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    background-color: $White;
+    top: 0;
+    z-index: 2;
+}
+
+.active {
+    display: inline-block;
+}
+
+button {
+    .menu-active {
+        color: $Bronze;
+    }
+}
+
+.container--active {
+    @media (min-width:768px) {
+        margin-top: 196px;
+    }
+    
+}
