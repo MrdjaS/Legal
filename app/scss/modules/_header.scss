@@ -11,12 +11,20 @@ button {
     .icon-menu {
         font-size: 1.6rem;
         color: $White;
+
+        .sticky & {
+            color: $Bronze;
+        }
         
     }
 
     .icon-close {
         font-size: 1.6rem;
         color: $White;
+
+        .sticky & {
+            color: $Bronze;
+        }
     }
 }
 
@@ -31,10 +39,17 @@ button {
 .navbar {
     position: relative;
     top: 29px;
-    transition: all 0.35s ease;
 
     @include for-tablet {  
         top: 0;
+    }
+
+    .sticky & {
+        position: fixed;
+        width: 100%;
+        background-color: $White;
+        top: 0;
+        z-index: 3;
     }
 }
 
@@ -134,6 +149,24 @@ button {
     }
 }
 
+.navbar__span {
+    color: $Grey3;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+    margin-left: -163px;
+    margin-top: -3px;
+    display: none;
+
+    .sticky & {
+        @media (min-width:1024px) {
+            display: inline-block;
+        }
+    }
+}
+
 .navbar__logo {
     z-index: 1;
     height: 42.5px;
@@ -167,6 +200,12 @@ button {
     @include for-mobile-L {  
         margin-top: 35px;
         margin-bottom: 5px;
+    }
+
+    .sticky & {
+        @media (min-width:768px) {
+            margin-top: 196px;
+        }
     }
 }
 
@@ -233,33 +272,6 @@ button {
     }
 }
 
-
-.hero {
-    height: 2000px;
-    background-color: aquamarine;
-}
-
-.sticky {
-    position: fixed;
-    width: 100%;
-    background-color: $White;
-    top: 0;
-    z-index: 2;
-}
-
 .active {
     display: inline-block;
-}
-
-button {
-    .menu-active {
-        color: $Bronze;
-    }
-}
-
-.container--active {
-    @media (min-width:768px) {
-        margin-top: 196px;
-    }
-    
 }

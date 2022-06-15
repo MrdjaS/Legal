@@ -1,0 +1,223 @@
+.slider__container {
+    max-width: 1760px;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider__content {
+    height: 100%;
+    width: 300%;
+    display: flex;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+
+.slider__card--primary {
+    background-image: url('../images/Image1.png');
+    padding-bottom: 332px; 
+}
+
+.slider__card--secondary {
+    background-image: url('../images/Image2.png');
+    padding-bottom: 290px; 
+
+}
+
+.slider__card--tertiary {
+    background-image: url('../images/Image3.png');
+    padding-bottom: 248px; 
+}
+
+.slider__card {
+    padding-top: 170px;
+    height: 100%;
+    max-width: 1760px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @media (max-width:1210px) {
+        padding-left: 20px;
+    }
+
+    @include for-tablet {  
+        padding-top: 70px;
+        padding-bottom: 378px;
+        background-size: auto 500px;
+    }
+
+    @include for-mobile-L {  
+        padding-top: 30px;
+        padding-bottom: 296px;
+        background-size: auto 360px;
+    }
+}
+
+.slider__text {
+    position: relative;
+    max-width: 570px;
+    width: 100%;
+    z-index: 2;
+
+    h2 {
+        letter-spacing: -2.56px;
+        color: $White;
+
+        @include for-mobile-L {  
+            letter-spacing: 0;
+        }
+    } 
+}
+
+.slider__paragraph {
+    font-size: 3rem;
+    line-height: 4.2rem;
+    font-weight: 300;
+    margin-top: 40px;
+    color: $White;
+
+    @include for-tablet {  
+        display: none;
+    }
+}
+
+.slider__paragraph--responsive {
+    padding: 27px 20px 60px 20px;
+    display: none;
+
+    @include for-mobile-L {  
+        padding: 27px 20px 50px 20px;
+    }
+
+    p {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+        color: $OldGrey;
+
+        @include for-mobile-L {  
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+        }
+    }
+}
+
+.slider__arrows {
+    position: relative;
+    z-index: 2;
+
+    @include for-tablet {  
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $White;
+        opacity: 0.8;
+    }
+
+    @include for-mobile-L {  
+        height: 70px;
+    }
+}
+
+.slider-Arrow {
+    position: absolute;
+    bottom: 330px;
+    width: 60px;
+    height: 60px;
+
+    @include for-tablet {  
+        position: relative;
+        bottom: 5px;
+    }
+
+    @include for-mobile-L {  
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-Arrow {
+        font-size: 6rem;
+
+        @include for-mobile-L {  
+            font-size: 4rem;
+        }
+    }
+}
+
+.slider__prev-Arrow {
+    left: 140px;
+    
+    @include for-tablet {  
+        left: 20px;
+    }
+}
+
+.slider__next-Arrow {
+    right: 140px;
+
+    @include for-tablet {  
+        right: 20px;
+    }
+}
+
+.slider__indicators {
+    position: absolute;
+    bottom: 41px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include for-tablet {  
+        position: relative;
+        bottom: 0;
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+.slider__indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $OldGrey;
+    background-color: $OldGrey;
+    border-radius: 50%;
+
+    @include for-mobile-L {  
+        width: 10px;
+        height: 10px;
+    }
+
+    &:first-of-type {
+        margin-right: 20px;
+
+        @include for-mobile-L {  
+            margin-right: 14px;
+        }
+    }
+
+    &:nth-of-type(2) {
+        margin-right: 20px;
+
+        @include for-mobile-L {  
+            margin-right: 14px;
+        }
+    }
+}
+
+.indicator__active {
+    background-color: $White;
+}
+
+.paragraph__active {
+    @include for-tablet {  
+        display: inline-block;
+    }
+}
+
+

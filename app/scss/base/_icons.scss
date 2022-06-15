@@ -7,8 +7,12 @@ $icon_font_name:"Icons";
 	url('../fonts/Icons.ttf') format('truetype'),
 	url('../fonts/Icons.svg#Icons') format('svg');
 }
+%icon-Arrow,
 %icon-close,
 %icon-Group,
+%icon-Image1,
+%icon-Image2,
+%icon-Image3,
 %icon-legal-logo-2,
 %icon-legal-logo,
 %icon-menu,
@@ -53,18 +57,30 @@ $icon_font_name:"Icons";
 	}
 }
 
-.icon-close:before {
+.icon-Arrow:before {
     content:'\E001';
 }
-.icon-Group:before {
+.icon-close:before {
     content:'\E002';
 }
-.icon-legal-logo-2:before {
+.icon-Group:before {
     content:'\E003';
 }
-.icon-legal-logo:before {
+.icon-Image1:before {
     content:'\E004';
 }
-.icon-menu:before {
+.icon-Image2:before {
     content:'\E005';
+}
+.icon-Image3:before {
+    content:'\E006';
+}
+.icon-legal-logo-2:before {
+    content:'\E007';
+}
+.icon-legal-logo:before {
+    content:'\E008';
+}
+.icon-menu:before {
+    content:'\E009';
 }
