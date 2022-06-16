@@ -76,7 +76,25 @@
                 margin-top: 35px;  
                 font-size: 10rem;
                 line-height: 9rem;
-            } 
+            }
+
+            i {
+                font-size: 12rem;
+                line-height: 10rem;
+                margin-top: 108px;
+                font-style: normal;
+                
+                @media (max-width:1023px) {
+                    margin-top: 40px;
+                }
+
+                @include for-tablet {
+                    margin-top: 35px;  
+                    font-size: 10rem;
+                    line-height: 9rem;
+                }
+            }
+            
         }
 
         &:last-of-type {
@@ -191,6 +209,19 @@
     @media (max-width:520px) {
         font-size: 3rem;
         line-height: 3.6rem;
+    }
+
+    i {
+        font-size: 5.4rem;
+        line-height: 5.2rem;
+        font-weight: 700;
+        color: $Gold;
+        font-style: normal;
+
+        @media (max-width:520px) {
+            font-size: 3rem;
+            line-height: 3.6rem;
+        }
     }
 }
 

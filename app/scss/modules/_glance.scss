@@ -1,0 +1,134 @@
+.glance {
+    padding-top: 100px;
+
+    @include for-laptop {  
+        padding-top: 29px;
+    }
+
+    @include for-mobile-L {  
+        padding-top: 21px;
+    } 
+
+    span {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 700;
+        font-family: $Roboto;
+        color: $NewGrey;
+
+        @include for-mobile-L {  
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.glance__container {
+    @media (max-width:1210px) {
+        padding: 0 20px;
+    }
+
+    h2 {
+        @include for-mobile-L {  
+            line-height: 3.2rem;
+        }
+    }
+}
+
+.glance__wrapper {
+    margin-top: 60px;
+
+    @include for-tablet {  
+        margin-top: 71px;
+    }
+
+    @media (max-width:767px) {
+        margin-top: 49px;
+    }
+
+    h3 {
+        margin-top: 15px;
+        font-size: 3.3rem;
+        line-height: 4.5rem;
+        font-weight: 700;
+        color: $NewGrey;
+
+        @include for-tablet {  
+            font-size: 2.8rem;
+            line-height: 3.8rem;
+        }
+
+        @include for-mobile-L {  
+            font-size: 2rem;
+            line-height: 2.8rem;
+        }
+    }
+}
+
+.glance__wrapper--primary {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 56px;
+    border-bottom: 1px solid rgba(77, 79, 83, 0.15);
+
+    @include for-tablet {  
+        margin-top: 30px;
+        padding-bottom: 49px;
+    }
+
+    @media (max-width:767px) {
+        flex-direction: column;
+        padding-bottom: 24px;
+    }
+}
+
+.glance__block {
+    max-width: 520px;
+    width: 100%;
+
+    @include for-laptop {  
+        max-width: 350px;
+        width: 100%;
+    }
+
+    @media (max-width:767px) {
+        max-width: 100%;
+    }
+
+    &:nth-of-type(2) {
+        @media (max-width:767px) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.glance__paragraph {
+    margin-top: 15px;
+
+    @include for-mobile-L {  
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+}
+
+.glance__paragraph-small {
+    max-width: 480px;
+    width: 100%;
+    margin-top: 30px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+
+    @include for-laptop {  
+        max-width: 323px;
+        width: 100%;
+    }
+
+    @media (max-width:767px) {
+        max-width: 100%;
+    }
+
+    @include for-mobile-L {  
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
+}

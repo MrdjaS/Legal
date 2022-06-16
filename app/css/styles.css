@@ -114,15 +114,15 @@ img {
   content: "\e002";
 }
 
-.icon-legal-logo-2:before {
+.icon-Group:before {
   content: "\e003";
 }
 
-.icon-Group:before {
+.icon-legal-logo:before {
   content: "\e004";
 }
 
-.icon-legal-logo:before {
+.icon-legal-logo-2:before {
   content: "\e005";
 }
 
@@ -414,7 +414,6 @@ button .icon-close {
 }
 
 .slider__container {
-  max-width: 1760px;
   width: 100%;
   height: 720px;
   margin: auto;
@@ -443,7 +442,6 @@ button .icon-close {
 .slider__card {
   padding-top: 170px;
   height: 100%;
-  max-width: 1760px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -747,6 +745,24 @@ button .icon-close {
     line-height: 9rem;
   }
 }
+.financial__text span:first-of-type i {
+  font-size: 12rem;
+  line-height: 10rem;
+  margin-top: 108px;
+  font-style: normal;
+}
+@media (max-width: 1023px) {
+  .financial__text span:first-of-type i {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .financial__text span:first-of-type i {
+    margin-top: 35px;
+    font-size: 10rem;
+    line-height: 9rem;
+  }
+}
 .financial__text span:last-of-type {
   font-size: 1.4rem;
   line-height: 2.1rem;
@@ -854,6 +870,19 @@ button .icon-close {
     line-height: 3.6rem;
   }
 }
+.financial__number i {
+  font-size: 5.4rem;
+  line-height: 5.2rem;
+  font-weight: 700;
+  color: #B3A87C;
+  font-style: normal;
+}
+@media (max-width: 520px) {
+  .financial__number i {
+    font-size: 3rem;
+    line-height: 3.6rem;
+  }
+}
 
 .financial__percentage {
   display: block;
@@ -867,5 +896,151 @@ button .icon-close {
   .financial__percentage {
     font-size: 1.2rem;
     line-height: 1.8rem;
+  }
+}
+
+.glance {
+  padding-top: 100px;
+}
+@media (max-width: 1024px) {
+  .glance {
+    padding-top: 29px;
+  }
+}
+@media (max-width: 425px) {
+  .glance {
+    padding-top: 21px;
+  }
+}
+.glance span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+  color: #4D4F53;
+}
+@media (max-width: 425px) {
+  .glance span {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1210px) {
+  .glance__container {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 425px) {
+  .glance__container h2 {
+    line-height: 3.2rem;
+  }
+}
+
+.glance__wrapper {
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .glance__wrapper {
+    margin-top: 71px;
+  }
+}
+@media (max-width: 767px) {
+  .glance__wrapper {
+    margin-top: 49px;
+  }
+}
+.glance__wrapper h3 {
+  margin-top: 15px;
+  font-size: 3.3rem;
+  line-height: 4.5rem;
+  font-weight: 700;
+  color: #4D4F53;
+}
+@media (max-width: 768px) {
+  .glance__wrapper h3 {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+}
+@media (max-width: 425px) {
+  .glance__wrapper h3 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.glance__wrapper--primary {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 56px;
+  border-bottom: 1px solid rgba(77, 79, 83, 0.15);
+}
+@media (max-width: 768px) {
+  .glance__wrapper--primary {
+    margin-top: 30px;
+    padding-bottom: 49px;
+  }
+}
+@media (max-width: 767px) {
+  .glance__wrapper--primary {
+    flex-direction: column;
+    padding-bottom: 24px;
+  }
+}
+
+.glance__block {
+  max-width: 520px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .glance__block {
+    max-width: 350px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .glance__block {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .glance__block:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+
+.glance__paragraph {
+  margin-top: 15px;
+}
+@media (max-width: 425px) {
+  .glance__paragraph {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+
+.glance__paragraph-small {
+  max-width: 480px;
+  width: 100%;
+  margin-top: 30px;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  font-weight: 400;
+}
+@media (max-width: 1024px) {
+  .glance__paragraph-small {
+    max-width: 323px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .glance__paragraph-small {
+    max-width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .glance__paragraph-small {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
   }
 }

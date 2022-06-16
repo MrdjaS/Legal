@@ -92,3 +92,42 @@ for(let i = 0; i < indicators.length; i++) {
     sliderParagraph[i].classList.add('paragraph__active');
   })
 }
+
+
+//CountUp in financial section
+
+const countUpFirstNumber = new CountUp('financial__number--1', 0, 74.3,1,4);
+const countUpSecondNumber = new CountUp('financial__number--2', 0, 10,0,4);
+const countUpThirdNumber = new CountUp('financial__number--3', 0, 13.6,1,4);
+const countUpFourthNumber = new CountUp('financial__number--4', 0, 4.1,1,4);
+const countUpFifthNumber = new CountUp('financial__number--5', 0, 80,0,4);
+const countUpSixthNumber = new CountUp('financial__number--6', 0, 15.9,1,4);
+const countUpSeventhNumber = new CountUp('financial__number--7', 0, 14.33,2,4);
+const countUpEighthNumber = new CountUp('financial__number--8', 0, 2.44,2,4);
+const countUpNinthNumber = new CountUp('financial__number--9', 0, 41,0,4);
+const countUpNumbers = [countUpFirstNumber, countUpSecondNumber, countUpThirdNumber, countUpFourthNumber, countUpFifthNumber, countUpSixthNumber, countUpSeventhNumber, countUpEighthNumber, countUpNinthNumber];
+
+
+let headerHeight = header.offsetHeight;
+let sliderHeight = document.querySelector('.slider').offsetHeight;
+let viewportHight = window.innerHeight;
+
+window.addEventListener('scroll', ()=> {
+  let viewportPosition = this.scrollY;
+  if (viewportPosition + viewportHight >= headerHeight + sliderHeight) {
+    const countUpFunction = countUpNumbers.forEach(number => {
+      number.start();
+    });
+    countUpFunction;
+  } 
+});
+
+
+
+
+
+
+
+
+
+
