@@ -1,9 +1,18 @@
 .slider__container {
     max-width: 1760px;
     width: 100%;
+    height: 720px;
     margin: auto;
     overflow: hidden;
     position: relative;
+
+    @include for-tablet {  
+        height: 500px;
+    }
+
+    @include for-mobile-L {  
+        height: 360px;
+    }
 }
 
 .slider__content {
@@ -12,22 +21,6 @@
     display: flex;
     scroll-behavior: smooth;
     transition: 0.5s;
-}
-
-.slider__card--primary {
-    background-image: url('../images/Image1.png');
-    padding-bottom: 332px; 
-}
-
-.slider__card--secondary {
-    background-image: url('../images/Image2.png');
-    padding-bottom: 290px; 
-
-}
-
-.slider__card--tertiary {
-    background-image: url('../images/Image3.png');
-    padding-bottom: 248px; 
 }
 
 .slider__card {
@@ -45,15 +38,23 @@
 
     @include for-tablet {  
         padding-top: 70px;
-        padding-bottom: 378px;
         background-size: auto 500px;
     }
 
     @include for-mobile-L {  
         padding-top: 30px;
-        padding-bottom: 296px;
         background-size: auto 360px;
     }
+}
+
+.container--primary {
+    @include for-laptop-L {  
+        justify-content: center;
+    } 
+
+    @include for-tablet {  
+        justify-content: flex-start;
+    } 
 }
 
 .slider__text {
@@ -130,10 +131,13 @@
     bottom: 330px;
     width: 60px;
     height: 60px;
+    border: 1.5px solid $White;
+    border-radius: 50%;
 
     @include for-tablet {  
         position: relative;
         bottom: 5px;
+        border: 1.5px solid $NewGrey;
     }
 
     @include for-mobile-L {  
@@ -141,12 +145,26 @@
         height: 40px;
     }
 
-    .icon-Arrow {
-        font-size: 6rem;
+    .icon-arrow-left {
+        font-size: 5rem;
+        color: $White;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        @include for-tablet {  
+            color: $NewGrey;
+        }
 
         @include for-mobile-L {  
-            font-size: 4rem;
+            font-size: 3rem;
         }
+    }
+
+    .icon-arrow-right {
+        @extend .icon-arrow-left;
     }
 }
 
@@ -160,6 +178,7 @@
 
 .slider__next-Arrow {
     right: 140px;
+    transform: rotate(180deg);
 
     @include for-tablet {  
         right: 20px;
@@ -171,12 +190,17 @@
     bottom: 41px;
     left: 50%;
     transform: translateX(-50%);
+    list-style: none;
 
     @include for-tablet {  
         position: relative;
         bottom: 0;
         left: 0;
         transform: translateX(0);
+    }
+
+    li {
+        display: inline;
     }
 }
 
@@ -187,27 +211,18 @@
     border: 1px solid $OldGrey;
     background-color: $OldGrey;
     border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
 
     @include for-mobile-L {  
         width: 10px;
         height: 10px;
+        margin-right: 14px;
     }
+}
 
-    &:first-of-type {
-        margin-right: 20px;
-
-        @include for-mobile-L {  
-            margin-right: 14px;
-        }
-    }
-
-    &:nth-of-type(2) {
-        margin-right: 20px;
-
-        @include for-mobile-L {  
-            margin-right: 14px;
-        }
-    }
+.slider__indicator--primary {
+    margin-right: 0;
 }
 
 .indicator__active {

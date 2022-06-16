@@ -6,9 +6,9 @@ const navbarLogoFirst = document.getElementById('navbar__logo--primary');
 const navbarLogoSecond = document.getElementById('navbar__logo--secondary');
 let sticky = navbar.offsetTop;
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {stickyNavbar()};
 
-function myFunction() {
+const stickyNavbar = () => {
     if (window.pageYOffset >= sticky) {
       header.classList.add('sticky');
       navbarLogoFirst.classList.remove('active');
@@ -25,8 +25,9 @@ function myFunction() {
 const menuBtn = document.querySelector('.icon-menu-btn');
 const closeBtn = document.querySelector('.icon-close-btn');
 const navbarMenu = document.querySelector('.navbar__menu');
+const navbarLinks = [...document.querySelectorAll('.navbar__list li a')];
 
-[closeBtn, menuBtn].forEach(item => {
+[closeBtn, menuBtn,... navbarLinks].forEach(item => {
     item.addEventListener('click', () => {
       [closeBtn, menuBtn, navbarMenu].forEach(btn => {
         btn.classList.toggle('active');
@@ -78,3 +79,16 @@ btnPrev.addEventListener('click',() => {
     indicators[slideNumber].classList.add('indicator__active');
     sliderParagraph[slideNumber].classList.add('paragraph__active');
 });
+
+for(let i = 0; i < indicators.length; i++) {
+  indicators[i].addEventListener('click', () => {
+    slideNumber = i;
+    slider.style.transform = `translateX(-${slideNumber*cardWidth}px)`;
+    for(j=0;j<indicators.length;j++) {
+      indicators[j].classList.remove('indicator__active');
+      sliderParagraph[j].classList.remove('paragraph__active');
+    }
+    indicators[i].classList.add('indicator__active');
+    sliderParagraph[i].classList.add('paragraph__active');
+  })
+}

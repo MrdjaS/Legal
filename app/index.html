@@ -17,7 +17,7 @@
       <nav class="navbar">
         <div class="navbar__content">
           <img class="navbar__logo active" id="navbar__logo--primary" src="images/legal-logo-2.svg" alt="logo"/>
-          <img class="navbar__logo" id="navbar__logo--secondary"src="images/legal-logo.svg" alt="logo"/>
+          <img class="navbar__logo" id="navbar__logo--secondary" src="images/legal-logo.svg" alt="logo"/>
           <span class="navbar__span">Annual Report & Acounts</span>
           <button class="icon-menu-btn active"><i class="icon-menu"></i></button>
           <button class="icon-close-btn"><i class="icon-close"></i></button>
@@ -65,7 +65,7 @@
       <section class="slider">
         <div class="slider__container">
           <div class="slider__content">
-            <div class="slider__card slider__card--primary">
+            <div class="slider__card" style="background-image: url('images/Image1.jpg');">
               <div class="container container--primary">
                 <div class="slider__text"> 
                   <h2>Vision</h2>
@@ -78,8 +78,8 @@
               </div>
             </div>
             
-            <div class="slider__card slider__card--secondary">
-              <div class="container">
+            <div class="slider__card" style="background-image: url('images/Image2.jpg');">
+              <div class="container container--primary">
                 <div class="slider__text">
                   <h2>Mission</h2>
                   <p class="slider__paragraph">
@@ -91,8 +91,8 @@
               </div>
             </div>
 
-            <div class="slider__card slider__card--tertiary">
-              <div class="container">
+            <div class="slider__card" style="background-image: url('images/Image3.jpg');">
+              <div class="container container--primary">
                 <div class="slider__text">
                   <h2>Purpose</h2>
                   <p class="slider__paragraph">
@@ -106,13 +106,13 @@
             </div>
           </div>
           <div class="slider__arrows">
-            <button class="slider-Arrow slider__prev-Arrow"><i class="icon-Arrow"></i></button>
-            <div class="slider__indicators">
-              <span class="slider__indicator indicator__active"></span>
-              <span class="slider__indicator"></span>
-              <span class="slider__indicator"></span>
-            </div>
-            <button class="slider-Arrow slider__next-Arrow"><i class="icon-Arrow"></i></button>
+            <button class="slider-Arrow slider__prev-Arrow"><i class="icon-arrow-left"></i></button>
+            <ul class="slider__indicators"> 
+              <li><span class="slider__indicator indicator__active"></span></li>
+              <li><span class="slider__indicator"></span></li>
+              <li><span class="slider__indicator slider__indicator--primary"></span></li>
+            </ul>
+            <button class="slider-Arrow slider__next-Arrow"><i class="icon-arrow-right"></i></button>
           </div>
         </div>
         <div class="slider__paragraph--responsive paragraph__active">
@@ -136,6 +136,74 @@
         </div>
       </section>
 
+      <section class="financial">
+        <div class="container">
+          <div class="financial__container">
+            <div class="financial__text">
+              <h2>Financial Highlights</h2>
+              <p>Our innovative approach has driven 
+                significant year on year growth, through
+                 a mix of double digit organic growth, 
+                 and selective acquisitions, including 
+                 six this year.
+              </p>
+              <span>+41%</span>
+              <span>Reported revenue for the period 
+                is £74.3m compared to £52.7m in 2019
+                 representing a 41% increase.</span>
+            </div>
+            <div class="financial__results">
+              <div class="financial__item">
+                <span class="financial__heading">Revenue</span>
+                <span class="financial__number">£74.3m</span>
+                <span class="financial__percentage">+41% (2019: £53m)</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Organic revenue growth rate %</span>
+                <span class="financial__number">+10%</span>
+                <span class="financial__percentage">2019: 15%</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Underlying PBT</span>
+                <span class="financial__number">£13.6m</span>
+                <span class="financial__percentage">+45% (2019: £9.4m)</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Reported PBT</span>
+                <span class="financial__number">£4.1m</span>
+                <span class="financial__percentage">-16.3% (2019: £4.8m)</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Cash conversion</span>
+                <span class="financial__number">80%</span>
+                <span class="financial__percentage">2019: 131%</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Net debt</span>
+                <span class="financial__number">£15.9m</span>
+                <span class="financial__percentage">2019: £14.1m</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Underlying EPS</span>
+                <span class="financial__number">14.33p</span>
+                <span class="financial__percentage">2019: 11.31p</span>
+              </div>
+
+              <div class="financial__item">
+                <span class="financial__heading">Reported EPS</span>
+                <span class="financial__number">2.44p</span>
+                <span class="financial__percentage">2019: 5.27p</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
 

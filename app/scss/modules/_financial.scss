@@ -1,0 +1,209 @@
+.financial {
+    background-color: $LightBlue;
+    padding-top: 80px;
+    padding-bottom: 90px;
+
+    @media (max-width:1023px) {
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: $White;
+    }
+}
+
+.financial__container {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width:1023px) {
+        flex-direction: column;
+    }
+}
+
+.financial__text {
+    max-width: 470px;
+    width: 100%;
+
+    @media (max-width:1210px) {
+        padding: 28px 20px 42px 20px;
+    }
+
+    @media (max-width:1023px) {
+        max-width: 1023px;
+        width: 100%;
+        background-color: $LightBlue;
+    }
+
+    @include for-tablet {  
+        padding: 28px 20px 28px 20px;
+    } 
+
+    h2 {
+        color: $NewGrey;
+    }
+
+    p {
+        margin-top: 40px;
+        max-width: 370px;
+        width: 100%;
+
+        @media (max-width:1023px) {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        @include for-mobile-L {  
+            max-width: 235px;
+            width: 100%;
+            margin-top: 20px;
+        } 
+    }
+
+    span {
+        display: block;
+        color: $NewGrey;
+
+        &:first-of-type {
+            font-size: 12rem;
+            line-height: 10rem;
+            margin-top: 108px;
+            font-weight: 300;
+            
+            @media (max-width:1023px) {
+                margin-top: 40px;
+            }
+
+            @include for-tablet {
+                margin-top: 35px;  
+                font-size: 10rem;
+                line-height: 9rem;
+            } 
+        }
+
+        &:last-of-type {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            font-weight: 400;
+            max-width: 270px;
+            width: 100%; 
+            margin-top: 15px;
+
+            @include for-tablet {
+                margin-top: 10px;  
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+                max-width: 251px;
+                width: 100%; 
+            } 
+        }
+    }
+}
+
+.financial__results {
+    display: inline-block;
+    text-align: right;
+
+    @media (max-width:1210px) {
+        padding: 33px 20px 60px 20px;
+    }
+
+    @media (max-width:1023px) {
+        text-align: left;
+    }
+
+    @media (max-width:767px) {
+        padding: 32px 20px 50px 20px;
+    }
+}
+
+.financial__item {
+    display: inline-block;
+    max-width: 270px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 40px;
+
+    &:nth-of-type(7),
+    &:nth-of-type(8) {
+        margin-bottom: 0;
+    }
+
+    @media (max-width:1023px) {
+        max-width: 224px;
+        width: 100%;
+        margin-right: 25px;
+
+        &:nth-of-type(3),
+        &:nth-of-type(6) {
+            margin-right: 0;
+        }
+    }
+    
+    @media (max-width:767px) {
+        &:nth-of-type(1),
+        &:nth-of-type(3),
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
+            margin-right: 20px;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(4),
+        &:nth-of-type(6),
+        &:nth-of-type(8) {
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width:520px) {
+        max-width: 128px;
+        width: 100%;
+    }
+
+    @include for-mobile-L {
+        &:first-of-type .financial__heading{
+            padding-bottom: 13px;
+        }
+    } 
+}
+
+.financial__heading {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: $NewGrey;
+    font-family: $Roboto;
+
+    @media (max-width:520px) {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+    }
+}
+
+.financial__number {
+    display: block;
+    font-size: 5.4rem;
+    line-height: 5.2rem;
+    font-weight: 700;
+    color: $Gold;
+    margin-top: 10px;
+
+    @media (max-width:520px) {
+        font-size: 3rem;
+        line-height: 3.6rem;
+    }
+}
+
+.financial__percentage {
+    display: block;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    color: $NewGrey;
+    margin-top: 10px;
+
+    @media (max-width:520px) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+}

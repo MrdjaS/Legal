@@ -47,6 +47,11 @@ p {
     line-height: 3.3rem;
     font-weight: 300;
     color: $NewGrey;
+
+    @include for-mobile-L {  
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
 img {
